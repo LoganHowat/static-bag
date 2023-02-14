@@ -10,4 +10,7 @@ describe('Bag class', () => {
     test('bag has no weight to return an error', () => {
         expect(() => new Bag()).toThrowError('bag needs weight')
     })
+    test('bag is too heavy returns an error', () => {
+        expect(() => new Bag(50)).toThrowError('Bag too heavy')
+    })
 })
